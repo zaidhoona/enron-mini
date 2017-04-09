@@ -17,6 +17,9 @@
 
 import pickle
 
+
+def total_data_points(data):
+    return len(data)
+
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
-
-
+print "total data points => " + str(total_data_points(enron_data))
