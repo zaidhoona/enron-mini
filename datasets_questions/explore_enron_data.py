@@ -16,10 +16,18 @@
 """
 
 import pickle
+import random
 
 
 def total_data_points(data):
     return len(data)
 
+
+def feature_per_person(data):
+    random_name = random.choice(data.keys())
+    return len(data[random_name])
+
+
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 print "total data points => " + str(total_data_points(enron_data))
+print "features per person => " + str(feature_per_person(enron_data))
